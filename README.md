@@ -1,0 +1,1 @@
+Contains common ideas like producer consumer queues and defer async
