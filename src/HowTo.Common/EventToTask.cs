@@ -20,5 +20,18 @@ namespace HowTo.Common
     public class SampleForEvent
     {
         public event MyEventHandler OnEvent;
+        public int Number { get; private set;}
+        public SampleForEvent()
+        {
+            Number = 0;
+        }
+
+        public void AddToNumber(int adder)
+        {
+            if (Number > 10)
+                OnEvent?.Invoke(this, new MyEventArgs("Too Big"));
+            else
+                Number += adder;
+        }
     }
 }
