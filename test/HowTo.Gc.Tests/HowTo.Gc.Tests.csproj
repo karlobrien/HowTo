@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\HowTo.Common\HowTo.Common.csproj" />
+    <ProjectReference Include="..\..\src\HowTo.GarbageCollection\HowTo.GarbageCollection.csproj" />
   </ItemGroup>
 
 </Project>
