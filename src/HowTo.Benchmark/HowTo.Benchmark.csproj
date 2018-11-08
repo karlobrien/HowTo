@@ -9,4 +9,8 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.11.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HowTo.Common\HowTo.Common.csproj" />
+  </ItemGroup>
+
 </Project>
