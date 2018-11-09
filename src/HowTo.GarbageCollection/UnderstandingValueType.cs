@@ -39,5 +39,28 @@ namespace HowTo.GarbageCollection
             }
         }
 
+        /// <summary>
+        /// Prevents the method from making changes
+        /// Caller has to initialise the value
+        /// You can change the internals of the array but not point at another reference
+        /// </summary>
+        /// <param name="items"></param>
+        public void RefLocalsIn(in int[] items)
+        {
+            items[0] = 100; //will not work
+            //items = new int[10]; - will not compile
+        }
+
+        public void TestIn(in long t)
+        {
+            //t = 10;  will not compile
+        }
+
+    }
+
+    public class SimpleObject
+    {
+        public string Name {get;set;}
+        public int Age {get;set;}
     }
 }

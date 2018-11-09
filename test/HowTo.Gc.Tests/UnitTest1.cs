@@ -28,4 +28,19 @@ namespace HowTo.Gc.Tests
             Assert.True(items[1] == 10);
         }
     }
+
+    public class RefTypesTests
+    {
+        [Fact]
+        public void RefLocalTest()
+        {
+            var item = new SimpleObject{ Name = "Test", Age=30};
+            ref SimpleObject copied = ref item;
+
+            Assert.True(item.Name == copied.Name);
+
+            copied = new SimpleObject { Name = "Change", Age=80};
+            Assert.True(item.Name == copied.Name);
+        }
+    }
 }
