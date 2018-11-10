@@ -39,6 +39,19 @@ namespace HowTo.GarbageCollection
             }
         }
 
+        //Produces an error as you cannot expose a ref struct to the heap
+        public void LookAtRefStruct()
+        {
+            var obj = new MyRefStruct();
+
+            //Console.WriteLine(obj);
+        }
+
+    }
+
+    public class UnderstandingReferences
+    {
+        //read only references
         /// <summary>
         /// Prevents the method from making changes
         /// Caller has to initialise the value
@@ -47,7 +60,7 @@ namespace HowTo.GarbageCollection
         /// <param name="items"></param>
         public void RefLocalsIn(in int[] items)
         {
-            items[0] = 100; //will not work
+            items[0] = 100; //will work
             //items = new int[10]; - will not compile
         }
 
@@ -56,11 +69,60 @@ namespace HowTo.GarbageCollection
             //t = 10;  will not compile
         }
 
+        /// <summary>
+        /// Equivalent in the other direction
+        /// Called can't modify the code
+        /// </summary>
+        public void RefReadonly()
+        {
+
+        }
+    }
+
+    public struct ReadObnlyArray<T>
+    {
+        private T[] _array;
+        public ref readonly T ItemRef(int i)
+        {
+            return ref _array[i];
+        }
     }
 
     public class SimpleObject
     {
         public string Name {get;set;}
         public int Age {get;set;}
+    }
+
+    public ref struct MyRefStruct
+    {
+        public string Name {get;set;}
+        public int Age {get;set;}
+    }
+
+
+    public struct S
+    {
+        public void InstanceM() { this = new S(); }
+    }
+
+    public class C
+    {
+        readonly S s;
+
+        void M() {
+            F1(s); // copy
+            F2(s); // no copy
+        }
+
+        void F1(S x) {
+            x.InstanceM(); // no copy
+            x.InstanceM(); // no copy
+        }
+
+        void F2(in S x) {
+            x.InstanceM(); // copy!
+            x.InstanceM(); // copy!
+        }
     }
 }
