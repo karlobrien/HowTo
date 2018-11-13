@@ -19,7 +19,6 @@ namespace HowTo.Benchmark
 
             int[] items = {1,2,3,4,5};
             UnderstandingValueType uvt = new UnderstandingValueType();
-            uvt.RefLocalsIn(in items);
             Console.WriteLine(items[0]);
         }
 
