@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using Xunit;
 using HowTo.Parser;
 
 namespace HowTo.Parser.Tests
 {
-    public class UnitTest1
+    public class StringUtiliyTests
     {
         [Fact]
         public void Test1()
