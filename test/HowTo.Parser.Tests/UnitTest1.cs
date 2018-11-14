@@ -10,9 +10,11 @@ namespace HowTo.Parser.Tests
         public void Test1()
         {
             var input = " This is a Test ".AsSpan();
-            var result = StringUtility.Trim(input);
+            ReadOnlySpan<char> result = StringUtility.Trim(input);
+            ReadOnlySpan<char> expected = "This is a Test".AsSpan();
 
-            Assert.True(result == "This is a Test");
+            Assert.True(result[0] == expected[0]);
+            Assert.True(result[result.Length - 1] == expected[expected.Length-1]);
         }
     }
 }
