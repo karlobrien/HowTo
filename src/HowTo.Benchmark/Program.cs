@@ -4,11 +4,26 @@ using HowTo.GarbageCollection;
 
 namespace HowTo.Benchmark
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            SampleSubject ss = new SampleSubject();
+            ss.Source.OnNext(1);
+            ss.Source.OnNext(1);
+            ss.Source.OnNext(1);
+            ss.Source.OnNext(1);
+
+            var item = Console.ReadLine();
+            if (item == "q")
+                return;
+
+
+
+
+
 
             SampleForEvent se = new SampleForEvent();
             se.OnEvent += new MyEventHandler(MaxReached);
@@ -27,4 +42,6 @@ namespace HowTo.Benchmark
             Console.WriteLine(e.ToString());
         }
     }
+
+
 }
