@@ -1,21 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F3E198E-2F38-4CFB-A0E6-141537FFC766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.Common", "src\HowTo.Common\HowTo.Common.csproj", "{7835F2E8-79BB-447E-AABD-75F51B98D743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowTo.Common", "src\HowTo.Common\HowTo.Common.csproj", "{7835F2E8-79BB-447E-AABD-75F51B98D743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.Benchmark", "src\HowTo.Benchmark\HowTo.Benchmark.csproj", "{47BF080B-E937-4616-BC5B-36873806192B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowTo.Benchmark", "src\HowTo.Benchmark\HowTo.Benchmark.csproj", "{47BF080B-E937-4616-BC5B-36873806192B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{05C274C4-57C9-4D0C-B16A-E4CEACF047BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.Common.Tests", "test\HowTo.Common.Tests\HowTo.Common.Tests.csproj", "{8AB9D396-EC3E-4D99-890B-CC4896796833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowTo.Common.Tests", "test\HowTo.Common.Tests\HowTo.Common.Tests.csproj", "{8AB9D396-EC3E-4D99-890B-CC4896796833}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.GarbageCollection", "src\HowTo.GarbageCollection\HowTo.GarbageCollection.csproj", "{EDC96AE8-34D5-4F9B-BBD1-0BCDC37432B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowTo.GarbageCollection", "src\HowTo.GarbageCollection\HowTo.GarbageCollection.csproj", "{EDC96AE8-34D5-4F9B-BBD1-0BCDC37432B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.Parser", "src\HowTo.Parser\HowTo.Parser.csproj", "{2A4B6271-F3BE-421E-A40F-6F38ABEC434B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowTo.Parser", "src\HowTo.Parser\HowTo.Parser.csproj", "{2A4B6271-F3BE-421E-A40F-6F38ABEC434B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.WorkerService", "src\HowTo.WorkerService\HowTo.WorkerService.csproj", "{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7835F2E8-79BB-447E-AABD-75F51B98D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -90,6 +89,21 @@ Global
 		{2A4B6271-F3BE-421E-A40F-6F38ABEC434B}.Release|x64.Build.0 = Release|Any CPU
 		{2A4B6271-F3BE-421E-A40F-6F38ABEC434B}.Release|x86.ActiveCfg = Release|Any CPU
 		{2A4B6271-F3BE-421E-A40F-6F38ABEC434B}.Release|x86.Build.0 = Release|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Debug|x64.Build.0 = Debug|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Debug|x86.Build.0 = Debug|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Release|x64.Build.0 = Release|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7835F2E8-79BB-447E-AABD-75F51B98D743} = {2F3E198E-2F38-4CFB-A0E6-141537FFC766}
@@ -97,5 +111,9 @@ Global
 		{8AB9D396-EC3E-4D99-890B-CC4896796833} = {05C274C4-57C9-4D0C-B16A-E4CEACF047BD}
 		{EDC96AE8-34D5-4F9B-BBD1-0BCDC37432B2} = {2F3E198E-2F38-4CFB-A0E6-141537FFC766}
 		{2A4B6271-F3BE-421E-A40F-6F38ABEC434B} = {2F3E198E-2F38-4CFB-A0E6-141537FFC766}
+		{BF7DEF58-55E2-4126-9AFB-9FEE15F17AAC} = {2F3E198E-2F38-4CFB-A0E6-141537FFC766}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0029363C-AFDB-44A7-8130-6D1AEBD59D76}
 	EndGlobalSection
 EndGlobal
